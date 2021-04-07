@@ -2,7 +2,7 @@
 
 **WIP**
 
-This is not official wrapper of Toast UI.
+This is not official wrapper of [Toast UI Editor](https://github.com/nhn/tui.editor).
 
 ## TODO
 
