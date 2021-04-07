@@ -1,0 +1,93 @@
+{
+	"browserslist": [
+		"defaults"
+	],
+	"description": "Toast UI Editor for Svelte",
+	"devDependencies": {
+		"@babel/core": "7.13.14",
+		"@babel/eslint-parser": "7.13.14",
+		"@babel/preset-env": "7.13.12",
+		"@rollup/plugin-commonjs": "18.0.0",
+		"@rollup/plugin-node-resolve": "11.2.1",
+		"@storybook/addon-essentials": "6.2.4",
+		"@storybook/addon-links": "6.2.4",
+		"@storybook/svelte": "6.2.4",
+		"autoprefixer": "10.2.5",
+		"babel-loader": "8.2.2",
+		"eslint": "7.23.0",
+		"eslint-config-prettier": "8.1.0",
+		"eslint-plugin-svelte3": "3.1.2",
+		"glob": "7.1.6",
+		"husky": "6.0.0",
+		"lint-staged": "10.5.4",
+		"postcss": "8.2.9",
+		"prettier": "2.2.1",
+		"prettier-plugin-svelte": "2.2.0",
+		"react-is": "17.0.2",
+		"rollup": "2.44.0",
+		"rollup-plugin-css-only": "3.1.0",
+		"rollup-plugin-livereload": "2.0.0",
+		"rollup-plugin-svelte": "7.1.0",
+		"sirv-cli": "1.0.11",
+		"svelte": "3.37.0",
+		"svelte-loader": "3.1.0",
+		"svelte-preprocess": "4.7.0"
+	},
+	"peerDependencies": {
+		"svelte": "3.37.0"
+	},
+	"dependencies": {
+		"@toast-ui/editor": "^2.5.1"
+	},
+	"files": [
+		"dist",
+		"index.d.ts"
+	],
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"keywords": [
+		"svelte",
+		"component",
+		"library"
+	],
+	"license": "MIT",
+	"lint-staged": {
+		"*.{svelte, html, css, scss, stylus, js, ts, json, yml, md}": [
+			"prettier --write",
+			"git add"
+		],
+		"*.{js, svelte}": [
+			"eslint --fix",
+			"git add"
+		]
+	},
+	"name": "tui-editor-svelte",
+	"version": "0.0.1-PRE",
+	"prettier": {
+		"singleQuote": true,
+		"tabWidth": 4,
+		"useTabs": true
+	},
+	"homepage": "https://ui.toast.com",
+	"bugs": {
+		"url": "https://github.com/composite/tui-editor-svelte/issues"
+	},
+	"author": "Composite <ukjinplant@msn.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/composite/tui-editor-svelte.git"
+	},
+	"scripts": {
+		"dev": "rollup -c -w",
+		"lint": "eslint --color --ignore-path .gitignore .",
+		"prepare": "node preprocess",
+		"prepublishOnly": "npm run prepare",
+		"start": "sirv public",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"svelte": "dist/index.js"
+}
