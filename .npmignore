@@ -1,0 +1,17 @@
+.*
+**/.*
+*.iml
+.github/
+.storybook/
+dist/*.stories.js
+node_modules/
+public/
+src/App.svelte
+src/main.js
+src/components/*.stories.js
+lib/dummy.js
+babel.config.json
+pnpm-lock.yaml
+preprocess.js
+rollup.config.js
+svelte-preprocess.config.js
