@@ -1,0 +1,53 @@
+{
+  "name": "tui-editor-svelte",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "18.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-svelte3": "^3.1.2",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "rollup": "^2.0.0",
+    "rollup-plugin-svelte": "^6.0.0",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "@toast-ui/editor": "^2.5.1"
+  },
+  "keywords": [
+    "svelte",
+    "component",
+    "library",
+    "tui",
+    "editor"
+  ],
+  "files": [
+    "src",
+    "dist",
+    "index.d.ts"
+  ],
+  "license": "MIT",
+  "version": "0.0.1-PRE",
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "homepage": "https://ui.toast.com",
+  "bugs": {
+    "url": "https://github.com/composite/tui-editor-svelte/issues"
+  },
+  "author": "Composite <ukjinplant@msn.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/composite/tui-editor-svelte.git"
+  }
+}
