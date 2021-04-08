@@ -7,9 +7,9 @@ This is not official wrapper of [Toast UI Editor](https://github.com/nhn/tui.edi
 ## TODO
 
 - [x] `<Editor/>`
-- [ ] `<Viewer/>`
+- [x] `<Viewer/>`
 - [ ] Test
-- [ ] Storybook
+- [x] Storybook
 - [ ] Documentation
 - [ ] publish to NPM
 - [ ] `sapper`

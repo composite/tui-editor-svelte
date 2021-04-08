@@ -8,15 +8,16 @@
 
 	/** @type {string} */
 	export let previewStyle = defaultValueMap.previewStyle;
+  let _previewStyle = previewStyle;
 	/** @type {string} */
 	export let height = defaultValueMap.height;
+  let _height = height;
   /** @type {string} */
 	export let initialEditType = defaultValueMap.initialEditType;
 	/** @type {string} */
 	export let initialValue = defaultValueMap.initialValue;
   /** @type {object} */
 	export let options = {};
-
   /**
    *
    * @param method {string}
@@ -29,6 +30,24 @@
         result = editor[method](...args);
       }
       return result;
+  }
+
+  /**
+   * @returns {Node}
+   */
+  export function getRootElement() {
+    return node;
+  }
+
+  $:{
+    if(previewStyle !== _previewStyle) {
+      editor.changePreviewStyle(previewStyle);
+      _previewStyle = previewStyle
+    }
+    if(height !== _height) {
+      editor.height(height);
+      _height = height
+    }
   }
 
   onMount(() => {
