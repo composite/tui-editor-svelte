@@ -35,7 +35,7 @@
     "index.d.ts"
   ],
   "license": "MIT",
-  "version": "0.0.1-PRE",
+  "version": "0.0.1-PRE3",
   "prettier": {
     "singleQuote": true,
     "tabWidth": 2,

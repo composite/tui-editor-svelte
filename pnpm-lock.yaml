@@ -13,10 +13,12 @@ specifiers:
   rollup-plugin-svelte: ^6.0.0
   svelte: ^3.0.0
 
+dependencies:
+  '@toast-ui/editor': 2.5.1
+
 devDependencies:
   '@rollup/plugin-commonjs': 18.0.0_rollup@2.44.0
   '@rollup/plugin-node-resolve': 9.0.0_rollup@2.44.0
-  '@toast-ui/editor': 2.5.1
   eslint: 7.23.0
   eslint-config-prettier: 8.1.0_eslint@7.23.0
   eslint-plugin-svelte3: 3.1.2_eslint@7.23.0+svelte@3.37.0
@@ -111,13 +113,13 @@ packages:
     dependencies:
       '@types/codemirror': 0.0.71
       codemirror: 5.60.0
-    dev: true
+    dev: false
 
   /@types/codemirror/0.0.71:
     resolution: {integrity: sha512-b2oEEnno1LIGKMR7uBEsr40al1UijF1HEpRn0+Yf1xOLl24iQgB7DBpZVMM7y54G5wCNoclDrRO65E6KHPNO2w==}
     dependencies:
       '@types/tern': 0.23.3
-    dev: true
+    dev: false
 
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
@@ -125,7 +127,6 @@ packages:
 
   /@types/estree/0.0.47:
     resolution: {integrity: sha512-c5ciR06jK8u9BstrmJyO97m+klJrrhCf9u3rLu3DEAJBirxRqSCvDQoYKmxuYwQI5SZChAWu+tq9oVlGRuzPAg==}
-    dev: true
 
   /@types/node/14.14.37:
     resolution: {integrity: sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==}
@@ -141,7 +142,7 @@ packages:
     resolution: {integrity: sha512-imDtS4TAoTcXk0g7u4kkWqedB3E4qpjXzCpD2LU5M5NAXHzCDsypyvXSaG7mM8DKYkCRa7tFp4tS/lp/Wo7Q3w==}
     dependencies:
       '@types/estree': 0.0.47
-    dev: true
+    dev: false
 
   /acorn-jsx/5.3.1_acorn@7.4.1:
     resolution: {integrity: sha512-K0Ptm/47OKfQRpNQ2J/oIN/3QYiK6FwW+eJbILhsdxh2WTLdl+30o8aGdTbm5JbffpFFAg/g+zi1E+jvJha5ng==}
@@ -257,7 +258,7 @@ packages:
 
   /codemirror/5.60.0:
     resolution: {integrity: sha512-AEL7LhFOlxPlCL8IdTcJDblJm8yrAGib7I+DErJPdZd4l6imx8IMgKK3RblVgBQqz3TZJR4oknQ03bz+uNjBYA==}
-    dev: true
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}

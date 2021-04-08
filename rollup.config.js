@@ -15,8 +15,10 @@ export default {
 		{ file: pkg.main, 'format': 'umd', name }
 	],
 	plugins: [
-		svelte(),
-		resolve(),
+    svelte(),
+		resolve({
+      dedupe: ['svelte']
+    }),
     commonjs()
 	]
 };

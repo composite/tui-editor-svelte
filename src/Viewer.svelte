@@ -4,7 +4,7 @@
   import { editorEvents, defaultValueMap } from './defaults';
 
   const emit = createEventDispatcher();
-  let editor, node;
+  let editor, node, mounted = false;
 
 	/** @type {string} */
 	export let height = defaultValueMap.height;
@@ -22,6 +22,18 @@
   }
 
   $:{
+    if(node && mounted && !editor) {
+      mounted = false;
+      options = { ...options, height, initialValue };
+      Object.keys(defaultValueMap).forEach(key => {
+        if (!options[key]) {
+          options[key] = defaultValueMap[key];
+        }
+      });
+      options.events = editorEvents.reduce((events, event) => (events[event] = (...args) => emit(event, args), events), {});
+      options.el = node;
+      editor = new Viewer(options);
+    }
     if(height !== _height) {
       editor.height(height);
       _height = height
@@ -29,20 +41,18 @@
   }
 
   onMount(() => {
-    options = { ...options, height, initialValue };
-    Object.keys(defaultValueMap).forEach(key => {
-      if (!options[key]) {
-        options[key] = defaultValueMap[key];
-      }
-    });
-    options.events = editorEvents.reduce((events, event) => (events[event] = (...args) => emit(event, args), events), {});
-    options.el = node;
-    editor = new Viewer(options);
+    mounted = true;
   })
   onDestroy(() => {
-    editorEvents.forEach(event => editor.off(event));
-    editor.remove();
+    if(editor) {
+      editorEvents.forEach(event => editor.off(event));
+      editor.remove();
+    }
+
   })
 </script>
-
+<style global>
+  @import 'codemirror/lib/codemirror.css';
+  @import '@toast-ui/editor/dist/toastui-editor.css';
+</style>
 <div bind:this={node}></div>
