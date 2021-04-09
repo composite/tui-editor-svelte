@@ -11,14 +11,15 @@ const name = pkg.name
 export default {
 	input: 'src/index.js',
 	output: [
-		{ file: pkg.module, 'format': 'es' },
-		{ file: pkg.main, 'format': 'umd', name }
+		{ file: pkg.module, format: 'es' },
+		{ file: pkg.main, format: 'umd', name }
 	],
 	plugins: [
-    svelte(),
 		resolve({
-      dedupe: ['svelte']
+      browser: true,
+      dedupe: ['svelte', '@toast-ui/editor']
     }),
+    svelte(),
     commonjs()
 	]
 };
