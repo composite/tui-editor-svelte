@@ -5,7 +5,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "kit:dev": "pnpm recursive run dev --filter @tui-editor-svelte/example-kit",
-    "publish": "pnpm recursive run dev --filter tui-editor-svelte"
+    "csr:dev": "pnpm recursive run dev --filter @tui-editor-svelte/example-csr",
+    "publish": "pnpm recursive run pub --filter tui-editor-svelte"
   },
   "repository": {
     "type": "git",

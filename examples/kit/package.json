@@ -3,7 +3,7 @@
 	"private": true,
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
-		"dev": "svelte-kit dev",
+		"dev": "svelte-kit dev -p 3001",
 		"build": "svelte-kit build",
 		"start": "svelte-kit start",
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
@@ -22,8 +22,5 @@
     "tui-editor-svelte": "workspace:../../packages/main"
 
 	},
-  "dependencies": {
-
-  },
 	"type": "module"
 }

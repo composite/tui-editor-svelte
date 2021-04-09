@@ -3,7 +3,8 @@
   "svelte": "Editor.svelte",
   "main": "Editor.svelte",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "pub": "npm publish"
   },
   "devDependencies": {
     "eslint": "^7.23.0",
@@ -35,7 +36,7 @@
     "LICENSE"
   ],
   "license": "MIT",
-  "version": "0.0.1-PRE4",
+  "version": "0.0.1",
   "prettier": {
     "singleQuote": true,
     "tabWidth": 2,
