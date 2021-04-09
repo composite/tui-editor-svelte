@@ -1,0 +1,19 @@
+{
+  "name": "@tui-editor-svelte/root",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "kit:dev": "pnpm recursive run dev --filter @tui-editor-svelte/example-kit",
+    "publish": "pnpm recursive run dev --filter tui-editor-svelte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/composite/tui-editor-svelte.git"
+  },
+  "author": "Composite <ukjinplant@msn.com>",
+  "bugs": {
+    "url": "https://github.com/composite/tui-editor-svelte/issues"
+  },
+  "homepage": "https://github.com/composite/tui-editor-svelte#readme"
+}
