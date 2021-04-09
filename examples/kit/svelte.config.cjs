@@ -15,7 +15,10 @@ module.exports = {
 		vite: {
 			ssr: {
 				noExternal: Object.keys(pkg.dependencies || {})
-			}
+      },
+      optimizeDeps: {
+        include: ['tui-editor-svelte']
+      }
 		}
 	}
 };

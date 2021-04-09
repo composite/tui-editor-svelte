@@ -19,7 +19,11 @@
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"eslint-config-prettier": "^8.1.0",
-		"tui-editor-svelte": "workspace:../../packages/main"
+    "tui-editor-svelte": "workspace:../../packages/main"
+
 	},
+  "dependencies": {
+
+  },
 	"type": "module"
 }

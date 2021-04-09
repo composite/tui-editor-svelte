@@ -1,8 +1,7 @@
 {
   "name": "tui-editor-svelte",
-  "svelte": "index.js",
-  "type": "module",
-  "main": "index.js",
+  "svelte": "Editor.svelte",
+  "main": "Editor.svelte",
   "scripts": {
     "preinstall": "npx only-allow pnpm"
   },
@@ -29,9 +28,11 @@
     "editor"
   ],
   "files": [
-    "src",
-    "dist",
-    "index.d.ts"
+    "defaults.js",
+    "Editor.svelte",
+    "Viewer.svelte",
+    "index.d.ts",
+    "LICENSE"
   ],
   "license": "MIT",
   "version": "0.0.1-PRE4",

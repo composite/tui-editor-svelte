@@ -1,12 +1,20 @@
 <script>
 	import Editor from 'tui-editor-svelte/Editor.svelte';
   import { content } from '$lib/dummy';
+
+  /** @type string */
+  let height;
+
 </script>
 
 <main>
 	<h1>Toast UI Editor for Svelte</h1>
 
-	<Editor initialValue={content} />
+  <p>
+    <button on:click={() => height = Math.ceil(Math.random() * 10) * 100}>change height{height ? ` (${height})` : ''}</button>
+  </p>
+
+	<Editor initialValue={content} {height} />
 
 	<p>Go to <a href="viewer">viewer</a>.</p>
 </main>
